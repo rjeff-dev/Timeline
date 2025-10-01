@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
   background: #111;
@@ -6,12 +12,58 @@ body {
   line-height: 1.6;
 }
 
-h1 {
+/* ===== HEADER ===== */
+.header {
   text-align: center;
   margin-bottom: 40px;
+}
+.header__title {
+  font-family: "Audiowide", cursive;
+  color: #00d9ff;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* ===== GRUPO ===== */
+.grupo {
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: "Audiowide", sans-serif;
+}
+.grupo__title {
+  font-size: 1.5rem;
+  color: #00d9ff;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.grupo__list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.grupo__item {
+  background: #222;
+  padding: 10px 20px;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0, 217, 255, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.grupo__item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.8);
+}
+.grupo__item p {
+  margin: 0;
+  font-size: 1rem;
+}
+.grupo__item p strong {
   color: #00d9ff;
 }
 
+/* ===== TIMELINE ===== */
 .timeline {
   position: relative;
   max-width: 1000px;
@@ -35,10 +87,12 @@ h1 {
 .timeline__item.left {
   left: 0;
   display: flex;
-  justify-content: right;
+  justify-content: flex-end;
 }
 .timeline__item.right {
   left: 50%;
+  display: flex;
+  justify-content: flex-start;
 }
 .timeline__item::before {
   content: "";
@@ -62,6 +116,7 @@ h1 {
   background: #222;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 217, 255, 0.5);
+  max-width: 90%;
 }
 .timeline__content h2 {
   margin-top: 0;

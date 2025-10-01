@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     background: #111;
@@ -6,12 +12,65 @@ body {
     line-height: 1.6;
 }
 
-h1 {
+/* ===== HEADER ===== */
+.header {
     text-align: center;
     margin-bottom: 40px;
-    color: #00d9ff;
+
+    &__title {
+        font-family: 'Audiowide', cursive;
+        color: #00d9ff;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
 }
 
+/* ===== GRUPO ===== */
+.grupo {
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: font-family: "Audiowide", sans-serif;;
+
+    &__title {
+        font-size: 1.5rem;
+        color: #00d9ff;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        background: #222;
+        padding: 10px 20px;
+        border-radius: 6px;
+        box-shadow: 0 0 8px rgba(0, 217, 255, 0.4);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px rgba(0, 217, 255, 0.8);
+        }
+
+        p {
+            margin: 0;
+            font-size: 1rem;
+
+            strong {
+                color: #00d9ff;
+            }
+        }
+    }
+}
+
+/* ===== TIMELINE ===== */
 .timeline {
     position: relative;
     max-width: 1000px;
@@ -36,11 +95,13 @@ h1 {
         &.left {
             left: 0;
             display: flex;
-            justify-content: right;
+            justify-content: flex-end;
         }
 
         &.right {
             left: 50%;
+            display: flex;
+            justify-content: flex-start;
         }
 
         &::before {
@@ -69,6 +130,7 @@ h1 {
         background: #222;
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 217, 255, 0.5);
+        max-width: 90%;
 
         h2 {
             margin-top: 0;
@@ -83,7 +145,7 @@ h1 {
             }
         }
 
-        img{
+        img {
             max-width: 100%;
             height: auto;
             display: block;
