@@ -135,18 +135,3 @@ body {
   margin-bottom: 10px;
   border-radius: 6px;
 }
-
-.footer {
-  display: block;
-}
-.footer__list__item {
-  list-style: none;
-}
-.footer__list__item a {
-  color: inherit;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-.footer__list__item a:hover {
-  color: #00d9ff;
-}
